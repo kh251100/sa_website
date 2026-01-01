@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+
+<style>
+:root{
+  --green:#1f6f57;
+  --bg:#f4f7f6;
+  --card:#ffffff;
+  --muted:#64748b;
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+}
+
+.wrap{
+  width:90%;
+  max-width:950px;
+  margin:20px auto 90px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+  background:white;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand img{
+  height:40px;
+  width:auto;
+}
+
+.brand h2{
+  margin:0;
+  color:var(--green);
+}
+
+.login-btn{
+  padding:8px 14px;
+  background:var(--green);
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+.hello{
+  text-align:center;
+  margin:20px 0;
+}
+
+.hello h3{
+  margin:0;
+  font-size:22px;
+}
+
+.card{
+  background:white;
+  padding:18px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  margin-bottom:20px;
+}
+
+.card h4{
+  margin:0 0 10px;
+  color:var(--muted);
+}
+
+.route{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.status{
+  color:var(--green);
+}
+
+.date{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.btn{
+  margin-top:10px;
+  width:100%;
+  padding:10px;
+  background:var(--green);
+  color:white;
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.tile{
+  background:white;
+  padding:18px;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  font-weight:bold;
+}
+
+.bottom{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:white;
+  box-shadow:0 -4px 10px rgba(0,0,0,.1);
+}
+
+.bar{
+  max-width:950px;
+  margin:auto;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+
+.bar span{
+  font-weight:bold;
+  color:var(--muted);
+}
+
+.bar .active{
+  color:var(--green);
+}
+
+@media(max-width:700px){
+  .grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">
+      <img src="imeg.png">
+      <h2>Saudia</h2>
+    </div>
+    <a class="login-btn" href="login page.html">Login</a>
+  </div>
+
+  <div class="hello">
+    <h3>Hi, User!</h3>
+  </div>
+
+  <div class="card">
+    <h4>Next Trip</h4>
+    <div class="route">
+      <span>Riyadh (RUH) → Jeddah (JED)</span>
+      <span class="status">Confirmed</span>
+    </div>
+    <div class="date">12 Jan 2026</div>
+    <button class="btn">View Booking</button>
+  </div>
+
+  <div class="grid">
+    <div class="tile">Book a Flight</div>
+    <div class="tile">Manage Booking</div>
+    <div class="tile">Seat Selection</div>
+    <div class="tile">Check-in</div>
+    <div class="tile">Flight Status</div>
+    <div class="tile">Offers</div>
+    <div class="tile">Support</div>
+  </div>
+
+</div>
+
+<div class="bottom">
+  <div class="bar">
+    <span class="active">Home</span>
+    <span>Book</span>
+    <span>My Trips</span>
+    <span>Profile</span>
+  </div>
+</div>
+
+</body>
+</html>
